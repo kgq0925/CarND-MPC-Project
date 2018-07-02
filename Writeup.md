@@ -17,7 +17,6 @@ The update equations is described as the following:
     fg[2 + v_start + t] = v1 - (v0 + a0 * dt);
     fg[2 + cte_start + t] = cte1 - ((f0 - y0) + (v0 * CppAD::sin(epsi0) * dt));
     fg[2 + epsi_start + t] = epsi1 - ((psi0 - psides0) + v0 * delta0 / Lf * dt);
----
 
 ## Timestep Length and Elapsed Duration (N & dt)
 
@@ -45,4 +44,3 @@ Here is the equations
     double delay_v = v + throttle_value * delay_t;
     double delay_cte = cte + v * sin(epsi) * delay_t;
     double delay_epsi = epsi - v * steer_value / Lf * delay_t;
----

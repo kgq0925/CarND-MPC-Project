@@ -10,7 +10,6 @@ The model consist of 5 states.
 - epsi: orientation error
 
 The update equations is described as the following:
-
 ---
     fg[2 + x_start + t] = x1 - (x0 + v0 * CppAD::cos(psi0) * dt);
     fg[2 + y_start + t] = y1 - (y0 + v0 * CppAD::sin(psi0) * dt);
